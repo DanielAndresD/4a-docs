@@ -1,0 +1,11 @@
+Host   ec2-23-23-133-10.compute-1.amazonaws.com
+Database d7hnibrk7om2km
+User fitxukfhtxglhl
+Port 5432
+Password   af29ed7435438cc2bfb2e9999869db19e45506117bd9ca1fb63b0e0f58b13484
+URI postgres://fitxukfhtxglhl:af29ed7435438cc2bfb2e9999869db19e45506117bd9ca1fb63b0e0f58b13484@ec2-23-23-133-10.compute-1.amazonaws.com:5432/d7hnibrk7om2km
+
+
+
+
+
