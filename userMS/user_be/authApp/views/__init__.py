@@ -1,2 +1,2 @@
-from .usuariosCreateView import UsuariosCreateView
 from .usuariosDetailView import UsuariosDetailView
+from .verifyTokenView import VerifyTokenView
