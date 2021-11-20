@@ -5,11 +5,15 @@ from authApp.serializers.usuarios_serializer import usuarios_serializer
 
 class UsuariosCreateView(views.APIView):
 
-    def post(self, request, *args, **kwargs):
-        serializer = usuarios_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-
+    def post(self, request):
+        datos_json = request.data
+        serializers = usuarios_serializer(data=datos_json)
+        if serializers.is_valid():
+            serializers.save()
+            return Response({"mensaje": "Usuario creado"}, 200)       
+        else:
+            return Response(serializers.errors, 405)
+        
         tokenData = {"username":request.data["username"],
         "password":request.data["password"]}
         tokenSerializer = TokenObtainPairSerializer(data=tokenData)
